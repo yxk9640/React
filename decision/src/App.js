@@ -1,11 +1,13 @@
+import './assests/App.css';
+import {Initial, Result, Confirm} from './components/components';
 
-
-//function App() {
- const App = () => {
+//function App() {}
+const App = () => {
   return (
-    <div>
-      <h1 className='h1' >Decision</h1>
+    <div className='container'>
+      <Initial /> 
     </div>
+    
   );
 }
 
