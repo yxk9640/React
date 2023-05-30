@@ -1,5 +1,6 @@
 import '../assests/App.css';
-import {useRef,React, useState} from 'react';
+import {useRef,React, useState, useContext} from 'react';
+import {MyContext} from '../context/context';
 
 
 const Initial = () => {
@@ -8,6 +9,7 @@ const Initial = () => {
 	//store in state
 	const [showNext, setShowNext] = useState(false);
 	const [errorMessage, setErrorMessage] = useState(null);
+	const contextUpdate = useContext(MyContext);
 	
 	const handleChange = () => {
 		if (textInput.current.value.length >= 5)
@@ -17,14 +19,19 @@ const Initial = () => {
 	}
 
 	const handleSubmit = () => {
-		if (textInput.current.value.length > 30)
+		const inputVal = textInput.current.value;
+		if ( inputVal.length > 30)
 		{
 			//alert("Please enter a question less than 30 characters");
 			setErrorMessage(true);
 			return false;
 		}
 		
-		alert("Question submitted"); 
+		//Change to next Component : Confirm 
+			//change screen value in context to 2
+			//pass data to next Component
+		contextUpdate.handleScreenChange(1);
+		contextUpdate.handleQuestionChange(inputVal);
 	}
 	
 
@@ -44,7 +51,7 @@ const Initial = () => {
 				showNext && 
 			// button is displayed only if ques.len >= 5 
 				<button
-					className="btn"
+					className="btn animate__animated animate__fadeIn"
 					onClick = {handleSubmit}
 					type='button'>
 						Next
