@@ -2,7 +2,7 @@ import {useContext} from 'react'
 import './assests/App.css';
 import 'animate.css';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
-import {ToastContainer} from 'react-toastify';
+//import {ToastContainer} from 'react-toastify';
 
 
 //implemented by functinal components
