@@ -88,3 +88,13 @@ body {
 .game-info {
   margin-left: 20px;
 }
+
+@media (min-width: 200px) {
+  .game {
+    flex-direction: column;
+  }
+}
+
+.game-board {
+  padding: 150px 0px 0 250px ;
+}
