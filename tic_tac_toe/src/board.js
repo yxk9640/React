@@ -30,7 +30,11 @@ export default function Board({xIsNext, squares, onPlay}){
 		onPlay(nextSq);
 		}
 	  
-	  
+		const font = {
+			fontFamily: 'Chokokutai', 
+			Cursive: true,
+			color: '#893fba',
+		};
   
   
 	return (
@@ -39,7 +43,7 @@ export default function Board({xIsNext, squares, onPlay}){
 		<div className="status">
 		  {calculateWinner(squares) ? 
 		  'Winner: ' + calculateWinner(squares) : 
-		  'Next player: ' + (xIsNext ? 'X' : 'O')}
+		  'Next player: '} <span style={font }> {(xIsNext ? 'X' : 'O')} </span>
 		  </div>
   
 		  {/*each Square should pass a value and
