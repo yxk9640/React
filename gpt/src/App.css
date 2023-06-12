@@ -1,15 +1,17 @@
 //this file is used to add css to all pages in App.js
-
 //apply to all pages
+
+
 * { 
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
-	scroll-behavior: smooth;
+
 }
 
-body {
+html,body {
 	background: var(--color-bg);
+	scroll-behavior: smooth;
 }
 
 a{

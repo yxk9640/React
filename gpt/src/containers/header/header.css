@@ -71,7 +71,7 @@
 	outline: none;
 	padding: 0 1rem;
 	border: none;
-	transform: matrix(-1, 0, 0, 1, 0, 0);
+	/*transform: matrix(-1, 0, 0, 1, 0, 0);*/
 
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;	
