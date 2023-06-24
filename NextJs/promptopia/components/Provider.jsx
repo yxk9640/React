@@ -1,8 +1,16 @@
-import React from 'react'
+//we are using browser functionalities 
+"use client";
 
-const Provider = () => {
+//to maintain user profile on all pages
+import { SessionProvider} from 'next-auth/react'; 
+
+
+const Provider = ({ children, session}) => {
   return (
-    <div>Provider</div>
+    <SessionProvider session={session}>
+      {children}  
+
+    </SessionProvider>
   )
 }
 
