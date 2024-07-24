@@ -1,0 +1,20 @@
+.tech-card {
+	perspective: 1000px;
+}
+
+.tech-card:hover{
+	transform: rotateY(10deg) rotateX(10deg);
+	transition: transform 0.5s;
+}
+
+.tech-card .MuiCardContent-root{
+	transform-style: preserve-3d;
+}
+
+.tech-card img{
+	transition: transform 0.3s;
+}
+
+.tech-card:hover img{
+	transform: scale(1.1);
+}
