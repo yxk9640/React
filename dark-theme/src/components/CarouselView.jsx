@@ -4,21 +4,24 @@ import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import { useTheme } from '@mui/material/styles';
 import { Pagination } from '@mui/lab';
+import ferari from '../images/ferari.jpeg';
+import mclaren from '../images/mclaren.jpeg';
+import merc from '../images/merc1.png';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const carouselItems = [
   {
-    label: 'Slide 1',
-    imgPath: 'https://via.placeholder.com/800x400.png?text=Slide+1',
+    label: 'Ferari',
+    imgPath: `${ferari}`,
   },
   {
-    label: 'Slide 2',
-    imgPath: 'https://via.placeholder.com/800x400.png?text=Slide+2',
+    label: 'Merc',
+    imgPath: `${merc}`,
   },
   {
-    label: 'Slide 3',
-    imgPath: 'https://via.placeholder.com/800x400.png?text=Slide+3',
+    label: 'Mc Laren',
+    imgPath: `${mclaren}`,
   },
 ];
 
